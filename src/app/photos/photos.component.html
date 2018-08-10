@@ -1,0 +1,16 @@
+<div>
+  <br>
+  <div *ngIf="loading">
+    Loading...
+  </div>
+  <div *ngIf="photos && !loading" class="row">
+    <div *ngFor="let photo of photos" class="col col-md-4">
+      <div>
+        <img [src]="photo.thumbnailUrl" [alt]="photo.title">
+      </div>
+      <div>
+        <h3>{{ photo.title }}</h3>
+      </div>
+    </div>
+  </div>
+</div>
