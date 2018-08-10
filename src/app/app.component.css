@@ -1,0 +1,9 @@
+.nav {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  background-color: #f5f5f5;
+}
+.nav li {
+  padding: 8px;
+}
