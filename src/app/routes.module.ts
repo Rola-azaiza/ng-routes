@@ -3,6 +3,7 @@ import {HomeComponent} from './home/home.component';
 import {AboutComponent} from './about/about.component';
 import {ContactComponent} from './contact/contact.component';
 import {PhotosComponent} from './photos/photos.component';
+import {PhotoComponent} from './photo/photo.component';
 
 const routes: Routes = [
   // basic routes
@@ -12,6 +13,7 @@ const routes: Routes = [
   { path: 'contact', component: ContactComponent },
   { path: 'contactus', redirectTo: 'contact' },
   { path: 'photos', component: PhotosComponent },
+  { path: 'photo/:id', component: PhotoComponent },
 
   {path: '**', component: HomeComponent}
 ];

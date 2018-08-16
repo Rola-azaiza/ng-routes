@@ -1,0 +1,8 @@
+<br>
+<div *ngIf="photo">
+  <img [src]="photo.thumbnailUrl" alt="">
+  <div>
+    <p>{{ photo.url }}</p>
+    <h2>{{ photo.title }}</h2>
+  </div>
+</div>

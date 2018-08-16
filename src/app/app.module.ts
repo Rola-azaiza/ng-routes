@@ -10,6 +10,7 @@ import { ContactComponent } from './contact/contact.component';
 import RoutesModule from './routes.module';
 import { PhotosComponent } from './photos/photos.component';
 import { PhotoDetailsComponent } from './photos/photo-details/photo-details.component';
+import { PhotoComponent } from './photo/photo.component';
 // import {HashLocationStrategy, LocationStrategy} from '@angular/common';
 
 @NgModule({
@@ -19,7 +20,8 @@ import { PhotoDetailsComponent } from './photos/photo-details/photo-details.comp
     AboutComponent,
     ContactComponent,
     PhotosComponent,
-    PhotoDetailsComponent
+    PhotoDetailsComponent,
+    PhotoComponent
   ],
   imports: [
     BrowserModule,

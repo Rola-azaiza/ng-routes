@@ -1,5 +1,15 @@
 <div>
   <br>
+  <div>
+    <input type="text"
+           #newquery
+           [value]="query"
+           (keydown.enter)="submit(newquery.value)">
+    <div>
+      <button class="btn btn-primary" (click)="submit(newquery.value)">Search</button>
+    </div>
+  </div>
+  <br>
   <div *ngIf="loading">
     Loading...
   </div>
@@ -10,6 +20,11 @@
       </div>
       <div>
         <h3>{{ photo.title }}</h3>
+      </div>
+      <div>
+        <a [routerLink]="['/photo', photo.id]" class="btn btn-primary">
+          View
+        </a>
       </div>
     </div>
   </div>

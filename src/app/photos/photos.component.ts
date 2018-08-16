@@ -11,23 +11,34 @@ import {ActivatedRoute, Router} from '@angular/router';
 export class PhotosComponent implements OnInit {
   loading: boolean;
   photos: Photo[];
+  query: string;
   constructor(
     private photosService: PhotosService,
     private router: Router,
     private route: ActivatedRoute
-  ) { }
+  ) {
+    this.route.queryParams
+      .subscribe((params: any) => {
+        this.query = params['query'] || '';
+      });
+  }
 
   ngOnInit() {
     this.getPhotos();
   }
   getPhotos() {
     this.loading = true;
-    this.photosService.getPhotos()
+    this.photosService.getPhotos(this.query)
       .subscribe(
         (photos: Photo[]) => {
           this.loading = false;
           this.photos = photos;
         });
+  }
+  submit(query: string): void {
+    this.router.navigate(['photos'], { queryParams: { query: query } })
+      .then(_ => this.getPhotos()
+      );
   }
 
 }
