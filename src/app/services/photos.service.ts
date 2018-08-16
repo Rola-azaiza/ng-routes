@@ -17,7 +17,7 @@ export class PhotosService {
   getPhotos(query: string): Observable<Photo[]>  {
     const httpOptions = {};
     if(query) {
-      httpOptions['params'] = new HttpParams().set('title', query)
+      httpOptions['params'] = new HttpParams().set('albumId', query);
     }
     return this.http.get(`${this.apiURL}/photos`, httpOptions).pipe(
       map((items: any[]) => {

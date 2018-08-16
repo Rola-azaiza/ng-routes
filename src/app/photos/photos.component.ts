@@ -36,6 +36,7 @@ export class PhotosComponent implements OnInit {
         });
   }
   submit(query: string): void {
+    // filter photos by albumId
     this.router.navigate(['photos'], { queryParams: { query: query } })
       .then(_ => this.getPhotos()
       );
