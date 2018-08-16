@@ -11,6 +11,9 @@ import RoutesModule from './routes.module';
 import { PhotosComponent } from './photos/photos.component';
 import { PhotoDetailsComponent } from './photos/photo-details/photo-details.component';
 import { PhotoComponent } from './photo/photo.component';
+import { NestedComponent } from './nested/nested.component';
+import { Child1Component } from './nested/child1/child1.component';
+import { Child2Component } from './nested/child2/child2.component';
 // import {HashLocationStrategy, LocationStrategy} from '@angular/common';
 
 @NgModule({
@@ -21,7 +24,10 @@ import { PhotoComponent } from './photo/photo.component';
     ContactComponent,
     PhotosComponent,
     PhotoDetailsComponent,
-    PhotoComponent
+    PhotoComponent,
+    NestedComponent,
+    Child1Component,
+    Child2Component
   ],
   imports: [
     BrowserModule,
