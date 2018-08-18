@@ -7,6 +7,9 @@ import {PhotoComponent} from './photo/photo.component';
 import {NestedComponent} from './nested/nested.component';
 import {Child1Component} from './nested/child1/child1.component';
 import {Child2Component} from './nested/child2/child2.component';
+import {LoginComponent} from './login/login.component';
+import {ProtectedComponent} from './protected/protected.component';
+import {LoggedInGuard} from './logged-in.guard';
 
 const routes: Routes = [
   // basic routes
@@ -25,7 +28,12 @@ const routes: Routes = [
       { path: 'child2', component: Child2Component},
     ]
   },
-
+  { path: 'login', component: LoginComponent },
+  {
+    path: 'protected',
+    component: ProtectedComponent,
+    canActivate: [ LoggedInGuard ]
+  },
   {path: '**', component: HomeComponent}
 ];
 

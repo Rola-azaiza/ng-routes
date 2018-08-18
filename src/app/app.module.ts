@@ -14,6 +14,9 @@ import { PhotoComponent } from './photo/photo.component';
 import { NestedComponent } from './nested/nested.component';
 import { Child1Component } from './nested/child1/child1.component';
 import { Child2Component } from './nested/child2/child2.component';
+import { LoginComponent } from './login/login.component';
+import { ProtectedComponent } from './protected/protected.component';
+import { SignupComponent } from './signup/signup.component';
 // import {HashLocationStrategy, LocationStrategy} from '@angular/common';
 
 @NgModule({
@@ -27,7 +30,10 @@ import { Child2Component } from './nested/child2/child2.component';
     PhotoComponent,
     NestedComponent,
     Child1Component,
-    Child2Component
+    Child2Component,
+    LoginComponent,
+    ProtectedComponent,
+    SignupComponent
   ],
   imports: [
     BrowserModule,
